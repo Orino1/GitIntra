@@ -1,0 +1,35 @@
+1. Test Case: Main Repository Found Locally
+Description: The program searches for the existence of the main repository on the local machine, and it is found. It then asks if the user wants to clone the repository.
+Expected Output:
+	If the user chooses to clone:
+	The program performs the cloning process.
+	The project directory is set.
+	All necessary files are created inside the project directory.
+	Shebang lines are added to Python files and Bash scripts.
+	Execute permissions are set for the relevant files (Python files and Bash scripts).
+	A command to access the project directory is provided.
+
+
+2. Test Case: Main Repository Not Found Locally, Found on GitHub
+Description: The program searches for the existence of the main repository on the local machine, and it is not found. It then checks GitHub and finds the repository. It asks the user if they want to clone the repository.
+Expected Output:
+	If the user chooses to clone:
+	The program performs the cloning process.
+	The project directory is set.
+	All necessary files are created inside the project directory.
+	Shebang lines are added to Python files and Bash scripts.
+	Execute permissions are set for the relevant files (Python files and Bash scripts).
+	A command to access the project directory is provided.
+
+
+3. Test Case: Main Repository Not Found Locally, Not Found on GitHub
+Description: The program searches for the existence of the main repository on the local machine, and it is not found. It also checks GitHub but does not find the repository. It asks the user if they want to create a new repository on GitHub.
+Expected Output:
+	If the user chooses to create a new repository:
+	The program creates the repository on GitHub.
+	The repository is cloned to the local machine.
+	The project directory is set.
+	All necessary files are created inside the project directory.
+	Shebang lines are added to Python files and Bash scripts.
+	Execute permissions are set for the relevant files (Python files and Bash scripts).
+	A command to access the project directory is provided.
