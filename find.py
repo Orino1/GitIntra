@@ -47,12 +47,15 @@ def creat(root,repo_name, directory, final_list):
         os.makedirs(full_path)
     for i in range(len(final_list)):
         files_path = os.path.join(full_path, final_list[i])
+        files_path = files_path.replace(',', '')
+        files_path = files_path.strip()
         if not os.path.exists(files_path):
             file = open(files_path, "w")
             if final_list[i].endswith(".py"):
                 subprocess.call(["chmod", "+x", files_path])
                 file.write("#!/usr/bin/python3\n")
-            elif all(not final_list[i].endswith(end) for end in [".c", ".h"]):
+            elif '.' not in files_path:
                 file.write("#!/bin/bash\n")
+                subprocess.call(["chmod", "+x", files_path])
             file.close()
-        subprocess.call(["chmod", "+x", files_path])
+        
