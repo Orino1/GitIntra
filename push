@@ -1,0 +1,15 @@
+#!/bin/bash
+
+Name="$1"
+Message="$2"
+
+if [ -z "$Message" ]
+then
+    git add "$Name"
+    git commit -m "Adding "$Name" File"
+    git push
+else
+    git add "$Name"
+    git commit -m "Update: $Message"
+    git push
+fi
